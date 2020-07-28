@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alarm Clock</title>
+        <style>
+            :root {
+                --background-color: #154843;
+                --clock-body-color: #F73D3E;
+                --bell-gray: #ADAEB0;
+                --handle-gray: #717172;
+            }
+
+            body {
+                background-color: var(--background-color);
+            }
+
+            .box-canvas {
+                position: relative;
+                width: 600px;
+                height: 600px;
+                margin: 8% auto;
+            }
+
+            .handle {
+                position: absolute;
+                width: 270px;
+                height: 100px;
+                background-color: var(--background-color);
+                left: 150px;
+                top: 15px;
+                border: 15px solid var(--handle-gray);
+                border-radius: 50% 50% 40% 40%;
+                border-bottom-color: var(--background-color);
+            }
+
+            .bell {
+                position: absolute;
+                top: 78px;
+                width: 10px;
+                height: 90px;
+                background-color: var(--bell-gray);
+            }
+
+            .bell::before {
+                content: '';
+                position: absolute;
+                width: 170px;
+                height: 150px;
+                top: -75px;
+                background-color: var(--bell-gray);
+                clip-path: circle(40% at 50% 100%);
+            }
+
+            .bell-right {
+                right: 180px;
+                transform: rotate(30deg);
+            }
+
+            .bell-right::before {
+                right: -75px;
+                transform: rotate(-5deg);
+            }
+
+            .bell-left {
+                left: 180px;
+                transform: rotate(-30deg);
+            }
+
+            .bell-left::before {
+                left: -75px;
+                transform: rotate(5deg);
+            }
+
+            .clock-face {
+                position: absolute;
+                top: 125px;
+                left: 150px;
+                background: #F4FCFB;
+                width: 275px;
+                height: 275px;
+                border-radius: 50%;
+                border: 15px solid var(--clock-body-color);
+            }
+
+            .clock-face::before {
+                content: '';
+                position: absolute;
+                width: 15px;
+                height: 70px;
+                bottom: -10px;
+                left: 0;
+                background-color: var(--clock-body-color);
+                transform: rotate(20deg);
+                border-radius: 5px;
+            }
+
+            .clock-face::after {
+                content: '';
+                position: absolute;
+                width: 15px;
+                height: 70px;
+                bottom: -10px;
+                right: 0;
+                background-color: var(--clock-body-color);
+                transform: rotate(-20deg);
+                border-radius: 5px;
+            }
+
+            .vertical-tick {
+                position: absolute;
+                width: 5px;
+                height: 25px;
+                background-color: var(--handle-gray);
+                left: 135px;
+            }
+
+            .twelve {
+                top: 10px;
+            }
+
+            .six {
+                bottom: 10px;
+            }
+
+            .horizontal-tick {
+                position: absolute;
+                height: 5px;
+                width: 25px;
+                background-color: var(--handle-gray);
+                top: 50%;
+            }
+
+            .three {
+                right: 10px;
+            }
+
+            .nine {
+                left: 10px;
+            }
+
+            .hand {
+                position: absolute;
+                width: 10px;
+                background-color: var(--handle-gray);
+
+            }
+
+            .hand::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                left: -5px;
+            }
+
+            .hour-hand {
+                left: 117px;
+                top: 135px;
+                height: 60px;
+                transform: rotate(30deg);
+            }
+
+            .hour-hand::after {
+                border-top: 10px solid var(--handle-gray);
+                bottom: -10px;
+            }
+
+            .hour-hand::before {
+                position: absolute;
+                content: '';
+                width: 30px;
+                height: 30px;
+                background-color: var(--handle-gray);
+                border-radius: 50%;
+                top: -15px;
+                left: -10px;
+            }
+
+            .minute-hand {
+                left: 135px;
+                top: 65px;
+                height: 70px;
+                animation: handMove 60s infinite;
+            }
+
+            .minute-hand::after {
+                border-bottom: 10px solid var(--handle-gray);
+                top: -10px;
+            }
+
+            @keyframes handMove {
+                0% {
+                    transform: rotate(0deg);
+                    transform-origin: bottom center;
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                    transform-origin: bottom center;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="box-canvas">
+            <div class="handle"></div>
+            <div class="bell-left bell"></div>
+            <div class="bell-right bell"></div>
+            <div class="clock-face">
+                <div class="twelve vertical-tick"></div>
+                <div class="three horizontal-tick"></div>
+                <div class="six vertical-tick"></div>
+                <div class="nine horizontal-tick"></div>
+                <div class="hour-hand hand"></div>
+                <div class="minute-hand hand"></div>
+            </div>
+        </div>
+    </body>
+
+</html>
