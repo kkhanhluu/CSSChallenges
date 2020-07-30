@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Single Price Grid Component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      :root {
+        --main-cyan: hsl(179, 62%, 43%);
+        --bright-yellow: hsl(71, 73%, 54%);
+        --light-gray: hsl(204, 43%, 93%);
+        --grayish-blue: hsl(218, 22%, 67%);
+      }
+
+      body {
+        font-family: 'Karla', sans-serif;
+        background-color: #E7EFF6;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      .card {
+        border-radius: 5px;
+        box-shadow: -1px 3px 24px 12px rgba(102, 97, 102, 0.51);
+        width: 70%;
+        margin: 8rem auto;
+        max-width: 700px;
+        background-color: #ffffff;
+      }
+
+      .card__header {
+        padding: 1rem 3rem;
+      }
+
+      .card__header--main-heading {
+        color: var(--main-cyan);
+        margin-bottom: 1rem;
+        font-size: 18px;
+      }
+
+      .card__header--secondary-heading {
+        color: var(--bright-yellow);
+        margin: 1rem 0;
+      }
+
+      .card__header--description {
+        color: #999999;
+        margin-bottom: 2rem;
+      }
+
+      .card__body {
+        display: flex;
+      }
+
+      @media screen and (max-width: 600px) {
+        .card__body {
+          flex-direction: column;
+        }
+      }
+
+      .card__body--subscription {
+        padding: 1rem 3rem;
+        background-color: #2BB3B1;
+        flex: 0 0 40%;
+        color: #eeeeee;
+        letter-spacing: 1px;
+      }
+
+      .card__body h3 {
+        color: #ffffff;
+        font-size: 18px;
+        margin-bottom: 1rem;
+      }
+
+      .card__body--price-info {
+        display: flex;
+        align-items: center;
+        margin-top: -1.5rem;
+        margin-bottom: -1rem;
+      }
+
+      .card__body--price {
+        color: #ffffff;
+        font-size: 30px;
+        margin-right: .5rem;
+      }
+
+      .card__body--per-month {
+        color: #dddddd;
+        font-weight: 100;
+      }
+
+      .btn {
+        display: block;
+        width: 87%;
+        background-color: var(--bright-yellow);
+        margin: 1.5rem 0;
+        padding: 1rem;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: -1px 15px 33px 4px rgba(102, 97, 102, 0.51);
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      .card__body--why-us {
+        background-color: #4ABEBD;
+        padding: 1rem 4rem 1rem 3rem;
+        flex: 1 1 60%;
+        color: #eeeeee;
+      }
+
+      .card__body--why-use-description {
+        margin-top: 1rem;
+        line-height: 1.5rem;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="card">
+      <div class="card__header">
+        <h1 class="card__header--main-heading">Join our community</h1>
+
+        <h4 class="card__header--secondary-heading">30-day, hassle-free money back guarantee</h4>
+
+        <p class="card__header--description">
+          Gain access to our full library of tutorials along with expert code reviews.
+          Perfect for any developers who are serious about honing their skills.
+        </p>
+      </div>
+      <div class="card__body">
+        <div class="card__body--subscription">
+          <h3>Monthly Subscription</h3>
+
+          <div class="card__body--price-info">
+            <p class="card__body--price">&dollar;29</p>
+            <p class="card__body--per-month">per month</p>
+          </div>
+
+          Full access for less than &dollar;1 a day
+
+          <a href="#" class="btn">Sign Up</a>
+        </div>
+        <div class="card__body--why-us">
+          <h3>Why Us</h3>
+
+          <p class="card__body--why-use-description">
+            Tutorials by industry experts
+            Peer &amp; expert code review
+            Coding exercises
+            Access to our GitHub repos
+            Community forum
+            Flashcard decks
+            New videos every week
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>.
+      </p>
+    </footer>
+  </body>
+
+</html>
