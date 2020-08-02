@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Huddle landing page with single introductory section</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      :root {
+        --main-violet: hsl(257, 40%, 49%);
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      body {
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      .main {
+        background-image: url(./images/bg-desktop.svg), linear-gradient(var(--main-violet), var(--main-violet));
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      @media screen and (max-width : 600px) {
+        html {
+          font-size: 10px;
+        }
+      }
+
+      .header {
+        padding: 4rem;
+      }
+
+      .header img {
+        width: 12rem;
+      }
+
+
+      .body {
+        display: flex;
+        padding: 4rem;
+        padding-bottom: 0;
+      }
+
+      @media screen and (max-width : 600px) {
+        .body {
+          flex-direction: column;
+        }
+      }
+
+      .body-left {
+        margin-top: -3rem;
+      }
+
+      @media screen and (max-width : 600px) {
+        .body-left img {
+          width: 100%;
+        }
+      }
+
+      .heading {
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        font-weight: 500;
+        font-size: 30px;
+        width: 80%;
+      }
+
+      @media screen and (max-width : 600px) {
+        .heading {
+          font-size: 22px;
+          width: 100%;
+          margin-top: 6rem;
+        }
+      }
+
+      .body-right {
+        margin-top: -2rem;
+        padding: 0 4rem;
+        display: flex;
+        flex-direction: column;
+      }
+
+      @media screen and (max-width : 600px) {
+        .body-right {
+          padding: 0 1rem;
+          text-align: center;
+        }
+      }
+
+      .description {
+        color: #fff;
+        line-height: 1.8rem;
+        padding: 0 0.5rem;
+      }
+
+      .btn {
+        display: block;
+        background-color: white;
+        color: var(--main-violet);
+        border-radius: 100px;
+        text-decoration: none;
+        text-align: center;
+        padding: 1rem 3rem;
+        width: 5rem;
+        box-shadow: 2px 3px 56px 12px rgba(0, 0, 0, 0.36);
+      }
+
+      @media screen and (max-width : 600px) {
+        .btn {
+          margin: 2rem auto;
+        }
+      }
+
+      .social-icons {
+        align-self: flex-end;
+        margin-top: auto;
+        display: flex;
+      }
+
+      @media screen and (max-width : 600px) {
+        .social-icons {
+          margin: 8rem auto;
+        }
+      }
+
+      .icon {
+        color: #fff;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        padding: 0.5rem;
+        display: block;
+        text-align: center;
+        font-size: 1.3rem;
+      }
+
+      .icon:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <section class="main">
+      <header class="header">
+        <img src="./images/logo.svg" />
+      </header>
+      <div class="body">
+        <div class="body-left">
+          <img src="./images/illustration-mockups.svg" />
+        </div>
+        <div class="body-right">
+          <h2 class="heading">Build The Community Your Fans Will Love</h2>
+          <p class="description">Huddle re-imagines the way we build communities. You have a voice, but so does your
+            audience.
+            Create connections with your users as you engage in genuine discussion.</p>
+          <a href="#" class="btn">Register</a>
+          <div class="social-icons">
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+</html>
