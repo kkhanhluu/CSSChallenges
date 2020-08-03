@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tea</title>
+        <style>
+            :root {
+                --mug-color: #9378B1;
+                --chamomile-color: #F4C17F;
+                --background-color: #E8E3FF;
+                --vapour-color: rgba(244, 193, 127, 0.5);
+                --dark-detail-color: #60557C;
+            }
+
+            body {
+                background-color: var(--background-color);
+            }
+
+            .canvas {
+                position: relative;
+                width: 600px;
+                height: 600px;
+                margin: 0 auto;
+                margin-top: 5%;
+            }
+
+            .mug-body {
+                position: absolute;
+                width: 220px;
+                height: 260px;
+                top: 200px;
+                left: 190px;
+                background-color: var(--mug-color);
+                border-radius: 0 0 40% 40%;
+            }
+
+            .mug-body::after {
+                content: '';
+                position: absolute;
+                top: -45px;
+                left: 0;
+                width: 180px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: var(--chamomile-color);
+                border: 20px solid var(--mug-color);
+            }
+
+            .mug-body::before {
+                content: '';
+                position: absolute;
+                height: 100px;
+                width: 20px;
+                top: 10px;
+                left: 150px;
+                border-right: 3px solid #60557C;
+                border-top: 2px solid #60557C;
+                z-index: 1;
+                border-radius: 50% 50% 0 0;
+            }
+
+            .handle {
+                position: absolute;
+                height: 120px;
+                width: 80px;
+                background-color: var(--background-color);
+                border: 30px solid var(--mug-color);
+                left: 350px;
+                top: 220px;
+                border-radius: 0 60% 60% 0;
+            }
+
+            .handle::before {
+                content: '';
+                position: absolute;
+                width: 250px;
+                height: 100px;
+                border-radius: 50%;
+                background-color: rgba(147, 120, 177, 0.2);
+                top: 135px;
+                left: -200px;
+            }
+
+            .handle::after {
+                content: '';
+                position: absolute;
+                border: 2px solid var(--dark-detail-color);
+                width: 40px;
+                height: 40px;
+                background-color: var(--background-color);
+                top: 60px;
+                left: -40px;
+                z-index: 1;
+                transform: rotate(-5deg);
+            }
+
+            .vapour {
+                position: absolute;
+                width: 50px;
+                height: 100px;
+                border-radius: 50%;
+            }
+
+            .left-vapour {
+                border-right: 20px solid var(--vapour-color);
+                top: -20px;
+                left: 180px;
+            }
+
+            .left-vapour::after {
+                position: absolute;
+                content: '';
+                width: 50px;
+                height: 100px;
+                border-radius: 50%;
+                border-left: 20px solid var(--vapour-color);
+                top: 70px;
+                left: 35px;
+            }
+
+            .left-vapour::before {
+                position: absolute;
+                content: '';
+                width: 50px;
+                height: 100px;
+                border-right: 20px solid var(--vapour-color);
+                top: 30px;
+                left: 50px;
+                border-radius: 50%;
+            }
+
+            .right-vapour {
+                border-left: 20px solid var(--vapour-color);
+                top: -30px;
+                left: 330px;
+            }
+
+            .right-vapour::after {
+                position: absolute;
+                content: '';
+                width: 50px;
+                height: 100px;
+                border-radius: 50%;
+                border-right: 20px solid var(--vapour-color);
+                top: 70px;
+                right: 35px;
+            }
+
+            .flower-petal,
+            .top-petal::after,
+            .top-petal::before {
+                position: absolute;
+                background-color: #fff;
+                z-index: 2;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 2px solid var(--dark-detail-color);
+            }
+
+            .top-petal {
+                top: 315px;
+                left: 355px;
+            }
+
+            .top-petal::after {
+                content: '';
+                top: 4px;
+                left: 8px;
+            }
+
+            .top-petal::before {
+                content: '';
+                top: 7px;
+                right: 7px;
+            }
+
+            .bottom-petal {
+                top: 333px;
+                left: 355px;
+            }
+
+            .bottom-petal::after {
+                content: '';
+                position: absolute;
+                background-color: #fff;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 2px solid var(--dark-detail-color);
+                left: 8px;
+                top: -3px;
+            }
+
+            .bottom-petal::before {
+                content: '';
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                background-color: var(--chamomile-color);
+                top: -11px;
+                left: 0px;
+                border-radius: 50%;
+                border: 2px solid var(--dark-detail-color);
+                z-index: 20;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="canvas">
+            <div class="left-vapour vapour"></div>
+            <div class="right-vapour vapour"></div>
+            <div class="handle"></div>
+            <div class="mug-body"></div>
+            <div class="flower-petal top-petal"></div>
+            <div class="flower-petal bottom-petal"></div>
+        </div>
+    </body>
+
+</html>
