@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600&display=swap"
+      rel="stylesheet">
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      :root {
+        --desaturated-red: hsl(0, 36%, 70%);
+        --soft-red: hsl(0, 93%, 68%);
+        --dark-grayish-red: hsl(0, 6%, 24%);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 10px;
+        font-family: 'Josefin Sans', sans-serif;
+      }
+
+      @media screen and (max-width: 600px) {
+        html {
+          font-size: 5px;
+        }
+      }
+
+      body {
+        font-size: 1.6rem;
+      }
+
+      .main {
+        display: flex;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+
+      @media screen and (max-width: 600px) {
+        .main {
+          flex-direction: column;
+        }
+      }
+
+      .body-right {
+        background-image: url(./images/hero-desktop.jpg);
+        background-size: cover;
+        background-position: center;
+        flex: 1;
+      }
+
+      @media screen and (max-width: 600px) {
+        .body-right {
+          display: none;
+        }
+      }
+
+      .body-left {
+        background-image: url(./images/bg-pattern-desktop.svg);
+        background-size: cover;
+        background-position: center;
+        padding: 4rem 14%;
+        width: 60%;
+      }
+
+      @media screen and (max-width: 800px) {
+        .body-left {
+          padding: 4rem 10%;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .body-left {
+          width: 100%;
+          padding: 6rem 0;
+        }
+
+        .header {
+          padding: 0 8rem;
+        }
+
+        .heading {
+          padding: 0 8rem;
+        }
+      }
+
+
+      .header .logo {
+        width: 20rem;
+        margin: 2rem 0;
+      }
+
+      .mobile-hero {
+        display: none;
+      }
+
+      @media screen and (max-width: 600px) {
+        .mobile-hero {
+          display: block;
+          margin-top: 6rem;
+        }
+
+        .hero-image-mobile {
+          width: 100%;
+          display: block;
+        }
+      }
+
+      h2 {
+        text-transform: uppercase;
+        font-size: 6rem;
+        letter-spacing: 1rem;
+        line-height: 1.1;
+        color: var(--dark-grayish-red);
+        margin-top: 8rem;
+      }
+
+      h2 span {
+        font-weight: 200;
+        color: var(--desaturated-red);
+        display: block;
+      }
+
+      .welcome {
+        margin: 3rem 0;
+        line-height: 1.5;
+        padding: 0 1rem;
+        color: var(--desaturated-red);
+      }
+
+      @media screen and (max-width: 600px) {
+        .welcome {
+          padding: 0 8rem;
+          font-size: 3.2rem;
+          margin: 8rem 0;
+        }
+      }
+
+      .form {
+        display: flex;
+      }
+
+      @media screen and (max-width: 600px) {
+        .form {
+          padding: 0 8rem;
+        }
+      }
+
+      .form input {
+        width: 100%;
+        border-radius: 40px;
+        border: 1px solid var(--desaturated-red);
+        color: var(--desaturated-red);
+        padding: 2rem 3rem;
+        margin-left: 1rem;
+        outline: none;
+      }
+
+      @media screen and (max-width: 600px) {
+        .form input {
+          padding: 4rem 6rem;
+        }
+      }
+
+      .form input:focus {
+        border-width: 2px;
+        box-shadow: 0px 0px 10px var(--desaturated-red);
+      }
+
+      ::-webkit-input-placeholder {
+        color: var(--desaturated-red);
+        font-size: 1.6rem;
+      }
+
+      @media screen and (max-width: 600px) {
+
+        ::-webkit-input-placeholder {
+          font-size: 3.2rem;
+        }
+      }
+
+      .btn {
+        width: 100px;
+        outline: none;
+        background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+        border: none;
+        border-radius: 40px;
+        margin-left: -9rem;
+        box-shadow: 2px 5px 10px hsla(0, 36%, 70%, 0.5);
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <section class="main">
+      <div class="body-left">
+        <div class="header">
+          <img src="./images/logo.svg" alt="Base Apparel log" class="logo">
+        </div>
+        <div class="mobile-hero">
+          <img src="./images/hero-mobile.jpg" alt="Hero mobile" class="hero-image-mobile">
+        </div>
+        <h2 class="heading">
+          <span>We're</span> coming <br> soon
+        </h2>
+        <div class="welcome">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our launch deals.
+        </div>
+        <form action="#" class="form">
+          <input type="email" placeholder="Email Address">
+          <button class="btn">
+            <img src="./images/icon-arrow.svg" alt="arrow button">
+          </button>
+        </form>
+      </div>
+      <div class="body-right"></div>
+    </section>
+  </body>
+
+</html>
