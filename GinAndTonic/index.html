@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gin And Tonic</title>
+        <style>
+            :root {
+                --background-color: #83C8E6;
+                --drink-color: #D4ECF6;
+                --drink-shadow: white;
+                --semi-transparent-white: #C4E4F3;
+                --lemon-rind: #EFD46F;
+                --lemon-pith: #F1E3D9;
+            }
+
+            body {
+                background-color: var(--background-color);
+            }
+
+            .canvas {
+                position: relative;
+                width: 600px;
+                height: 600px;
+                margin: 8% auto;
+            }
+
+            .glass {
+                position: absolute;
+                top: 150px;
+                left: 175px;
+            }
+
+            .glass::after {
+                content: '';
+                position: absolute;
+                width: 248px;
+                height: 80px;
+                background-color: var(--semi-transparent-white);
+                border: 1px solid white;
+                border-radius: 50%;
+                z-index: 5;
+            }
+
+            .glass::before {
+                content: '';
+                position: absolute;
+                height: 250px;
+                width: 250px;
+                top: 40px;
+                background: linear-gradient(to bottom, var(--semi-transparent-white), var(--semi-transparent-white) 50%, var(--drink-color) 10%);
+                clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+                z-index: 1;
+            }
+
+            .bottom {
+                position: absolute;
+                width: 201px;
+                height: 70px;
+                top: 250px;
+                left: 24px;
+                background-color: var(--drink-color);
+                border-radius: 50%;
+            }
+
+            .bottom::before {
+                content: '';
+                position: absolute;
+                top: -110px;
+                left: -10px;
+                background-color: var(--drink-color);
+                border: 1px solid white;
+                width: 220px;
+                height: 60px;
+                border-radius: 50%;
+                z-index: 10;
+            }
+
+            .shadow {
+                position: absolute;
+                width: 300px;
+                height: 100px;
+                border-radius: 50%;
+                background-color: rgba(0, 0, 0, 0.05);
+                top: 395px;
+                left: 150px;
+            }
+
+            .lemon {
+                position: absolute;
+                width: 175px;
+                height: 100px;
+                transform: rotate(-25deg);
+                overflow: hidden;
+                top: 90px;
+                left: 75px;
+                z-index: 10;
+            }
+
+            .lemon::after {
+                content: '';
+                position: absolute;
+                width: 155px;
+                height: 155px;
+                top: 10px;
+                background-color: var(--lemon-pith);
+                border-radius: 50%;
+                border: 10px solid var(--lemon-rind);
+            }
+
+            .segment,
+            .segment::after,
+            .segment::before {
+                position: absolute;
+                width: 65px;
+                height: 25px;
+                background-color: var(--lemon-rind);
+                border: 2px solid var(--lemon-pith);
+                bottom: 5px;
+                z-index: 15;
+            }
+
+            .segment-left {
+                right: 50%;
+                border-radius: 50% 30% 50% 30%;
+            }
+
+            .segment-left::after {
+                content: '';
+                transform: rotate(45deg);
+                border-radius: 50% 30% 50% 30%;
+                right: -15px;
+                bottom: 10px;
+            }
+
+            .segment-right {
+                left: 50%;
+                border-radius: 30% 50% 30% 50%;
+            }
+
+            .segment-right::before {
+                content: '';
+                transform: rotate(-45deg);
+                border-radius: 30% 50% 30% 50%;
+                left: -15px;
+                bottom: 10px;
+            }
+
+            .segment-right::after {
+                content: '';
+                transform: rotate(-90deg);
+                border-radius: 30% 50% 30% 50%;
+                left: -32px;
+                bottom: 20px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="canvas">
+            <div class="shadow"></div>
+            <div class="glass">
+                <div class="bottom"></div>
+            </div>
+            <div class="lemon">
+                <div class="segment-left segment"></div>
+                <div class="segment-right segment"></div>
+            </div>
+        </div>
+    </body>
+
+</html>
