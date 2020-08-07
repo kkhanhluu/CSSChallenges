@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+:root {
+  --dark-blue: hsl(233, 26%, 24%);
+  --lime-green: hsl(136, 65%, 51%);
+  --bright-cyan: hsl(192, 70%, 51%);
+  --grayish-blue: hsl(233, 8%, 62%);
+  --light-grayish-Blue: hsl(220, 16%, 96%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1.6rem;
+}
+
+.btn {
+  color: var(--white);
+  background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+  padding: 1.5rem 3rem;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.2s;
+  display: block;
+  width: fit-content;
+}
+.btn:hover {
+  filter: opacity(0.8);
+}
+/* header */
+.header-mobile {
+  display: none;
+}
+header.header-desktop {
+  background-color: var(--white);
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+.navigation {
+  display: flex;
+  list-style: none;
+}
+.nav-item {
+  text-decoration: none;
+  padding: 2rem 1rem;
+  color: var(--grayish-blue);
+  transition: all 0.2s;
+}
+.nav-item:hover {
+  box-shadow: 0 4px 0 0 var(--lime-green);
+  color: black;
+}
+
+/* hero */
+.hero {
+  display: flex;
+  background-color: #fafafa;
+  background-image: url(./images/bg-intro-desktop.svg);
+  background-position: 700px -350px;
+  background-repeat: no-repeat;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.hero-left {
+  width: 60%;
+  padding: 2rem 20rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-title {
+  font-size: 5rem;
+  line-height: 1.1;
+  font-weight: 500;
+  color: var(--dark-blue);
+}
+
+.hero-left .description {
+  margin: 3rem 0;
+  color: var(--grayish-blue);
+}
+
+.hero-right {
+  width: 40%;
+}
+
+.hero-image {
+  display: block;
+  width: 60rem;
+  top: -3rem;
+  right: -10rem;
+  z-index: 2;
+  position: absolute;
+}
+
+/* features */
+.features {
+  background-color: #f4f5f7;
+  padding: 8rem 10rem 8rem 20rem;
+}
+.features__title {
+  font-size: 4rem;
+  line-height: 1.1;
+  font-weight: 100;
+  color: var(--dark-blue);
+}
+
+.features__description {
+  margin: 3rem 0 5rem 0;
+  width: 50%;
+  color: var(--grayish-blue);
+}
+
+.features__wrapper {
+  display: flex;
+  color: var(--grayish-blue);
+  justify-content: space-between;
+}
+
+.feature {
+  padding-right: 2rem;
+}
+
+.feature__title {
+  color: var(--dark-blue);
+  font-weight: 400;
+  margin: 3rem 0;
+}
+
+.feature__description {
+  line-height: 1.6;
+}
+
+/* articles section */
+.articles {
+  background-color: #fafafa;
+  padding: 1rem 10rem 5rem 20rem;
+}
+
+.articles__title {
+  margin: 5rem 0;
+  color: var(--dark-blue);
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+.articles__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article {
+  background-color: white;
+  color: var(--grayish-blue);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.article:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.article__hero {
+  display: block;
+  width: 100%;
+  height: 40%;
+}
+
+.article__body {
+  padding: 4rem 1.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.article__author {
+  font-size: 1.3rem;
+}
+
+.article__title {
+  display: block;
+  color: var(--dark-blue);
+  margin: 2rem 0;
+  text-decoration: none;
+}
+
+.article__title:hover {
+  color: var(--lime-green);
+}
+
+.article__summary {
+  font-size: 1.4rem;
+}
+
+/* footer */
+footer {
+  display: flex;
+  background-color: var(--dark-blue);
+  padding: 4rem 20rem;
+  padding-right: 10rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 13vh;
+}
+
+.column p {
+  color: var(--grayish-blue);
+}
+
+.first-column {
+  width: 18%;
+}
+
+.social-icons {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-link:hover .icon path {
+  fill: var(--lime-green);
+}
+
+.footer__link {
+  color: var(--grayish-blue);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.footer__link:hover {
+  color: var(--lime-green);
+}
+
+.fourth-column {
+  align-items: flex-end;
+}
