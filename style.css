@@ -1,0 +1,45 @@
+body {
+  font-family: 'Pixelated MS Sans Serif', Arial;
+  color: #333333;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: teal;
+}
+.welcome-message {
+  margin: 32px;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  width: 250px;
+}
+
+.programs {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1 1 30%;
+  height: 90vh;
+  overflow: hidden;
+  align-content: flex-start;
+}
+.program {
+  text-align: center;
+  padding: 8px;
+  width: 78px;
+  height: 75px;
+  margin: 10px;
+}
+
+.program .title {
+  margin-top: 5px;
+}
+
+.project,
+.project:active,
+.project:focus {
+  cursor: pointer;
+  text-decoration: none;
+  color: #333333;
+  outline: none;
+}
